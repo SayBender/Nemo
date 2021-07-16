@@ -2,7 +2,7 @@
 ========
 PyTorch training code and pretrained models for **NEmo** (**NE**vada s**mo**ke detection benchmark).
 
-
+test
 ### Temporary instructions
 > This is going to host a single standard centralized fully maintained most up to date code for our Smoke Detection. 
 
