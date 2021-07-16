@@ -1,2 +1,2 @@
 # Nemo
-## **Ne** vada S**mo**ke detection benchmark 
+ **Ne**vada S**mo**ke detection benchmark 
