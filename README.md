@@ -1,2 +1,2 @@
 # Nemo
-Nevada Smoke detection benchmark 
+**Ne**vada S**mo**ke detection benchmark 
