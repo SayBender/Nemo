@@ -24,5 +24,6 @@ conda list --explicit > spec-file.txt
 
 Christina and Yongyi can also help write a section about the data preparation.
 
+To create an organized and professional looking README for the codes and models that you upload to this repository, you can get inspired by the readme file of other repositories or cheatsheets online about github text editing.
 
-
+## **This REPOSITORY is Private** 
