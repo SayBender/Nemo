@@ -3,6 +3,8 @@
 PyTorch training code and pretrained models for **NEmo** (**NE**vada s**mo**ke detection benchmark).
 
 ### Temporary instructions
+> This is going to host a single standard centralized fully maintained most up to date code for our Smoke Detection. 
+
 Connor, please put all the code cleaned and named properly (**NOT** based on WIDER face anymore) but based on our own thing. 
 Make sure to complete this README file in a way that literally if I cloned this to my computer and simply followed your instructions I can replicate it.
 
