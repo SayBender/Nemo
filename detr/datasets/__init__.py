@@ -4,7 +4,7 @@ import torchvision
 
 from .coco import build as build_coco
 from .face import build as build_face
-from .smoke import build as build_smoke
+from .smoke import build as build_smoke #**added line for smoke
 
 def get_coco_api_from_dataset(dataset):
     for _ in range(10):
@@ -21,7 +21,7 @@ def build_dataset(image_set, args):
         return build_coco(image_set, args)
     if args.dataset_file == 'face':
         return build_face(image_set, args)
-    if args.dataset_file == 'smoke':
+    if args.dataset_file == 'smoke':        #**added argument for smoke
         return build_smoke(image_set, args)
     if args.dataset_file == 'coco_panoptic':
         # to avoid making panopticapi required for coco
