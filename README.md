@@ -48,23 +48,23 @@ In this read.me file, you can find the instructions for the following tasks:
 
 In order to start reproducing our work, you need to install the following libraries: 
 Conda Installs:
-‘’’
+'''
 conda install pytorch torchvision**Different depending on your computer**
 **pytorch and torchvision must be compatible with each other, if you cannot get them to be compatible in your current environment, create a new one.**
 pip install pycocotools
-‘’’
+'''
 
-**Data preparation:**
+##Data preparation:
 
 The DETR model only accepts files in COCO JSON format. In order to create a dataset, annotate your images using any tool that specializes in object labelling, or that creates bounding boxes, that will export your annotations into JSON files. If you wish to use tools that don't export directly into COCO JSON format, you can convert your YOLO or CSV files into JSON files. It is easier to combine annotations and datasets using a non-JSON format if you are working with multiple people on one training dataset. We converted our YOLO annotations into JSON files using https://github.com/Taeyoung96/Yolo-to-COCO-format-converter. If you follow the linked Github or export your annotations as a JSON file, your dataset will be ready to train the model.
 
-**Testing the model:**
+##Testing the model:
 
 In order to test the model, you need the following three things. The test.py script, our model, and a customs dataset. 
 
-1. Test.py script: This script can be found in our repository. Once you have downloaded this, it is important to note that all the changeable parameters such as number of layers and queries must match that of the model. If you plan on testing our model, you don't have to change anything, however, if you are testing using a model you designed with different parameters, you will need to change the code in the test.py script to match it. For example, if you trained the model with 5 queries, you need to change the default number of queries in the test.py script to 5 as well. 
-2. Model: Our model can be found in the outputs section. The model is stored under the file ‘checkpoint.pth’. 
-3. Custom dataset: In order to test the model, you will need to have a dataset consisting of images with both smoke and non-smoke data. If you don’t have a dataset of your own, we have also provided the link to Govil et al.’s fuego dataset. (https://drive.google.com/file/d/1x4bzhH-ZgEUUvh45EStFNrTT_wLSPC35/view) 
+ 1. Test.py script: This script can be found in our repository. Once you have downloaded this, it is important to note that all the changeable parameters such as number of layers and queries must match that of the model. If you plan on testing our model, you don't have to change anything, however, if you are testing using a model you designed with different parameters, you will need to change the code in the test.py script to match it. For example, if you trained the model with 5 queries, you need to change the default number of queries in the test.py script to 5 as well. 
+ 2. Model: Our model can be found in the outputs section. The model is stored under the file ‘checkpoint.pth’. 
+ 3. Custom dataset: In order to test the model, you will need to have a dataset consisting of images with both smoke and non-smoke data. If you don’t have a dataset of your own, we have also provided the link to Govil et al.’s fuego dataset. (https://drive.google.com/file/d/1x4bzhH-ZgEUUvh45EStFNrTT_wLSPC35/view) 
 
 After you have all the necessary files listed above, you are ready to test the model using a custom dataset. In order to test the model, you can simply run the following script: 
 
