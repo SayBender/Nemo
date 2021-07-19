@@ -27,6 +27,9 @@ conda list --explicit > spec-file.txt
 
 Christina and Yongyi can also help write a section about the data preparation.
 
+## Data Preparations:
+The DETR model only accepts JSON files. So you can annotate with any tool that creates bounding boxes that will export your annotations into JSON files or convert your annotations into JSON. It is easier to combine annotaions and datasets using a non-JSON format if you are working with multiple people on one training dataset. We converted our YOLO annotations into JSON files using https://github.com/Taeyoung96/Yolo-to-COCO-format-converter. If you follow the linked Github or export your annotations as a JSON file, your dataset will be ready to train the model.
+
 To create an organized and professional looking README for the codes and models that you upload to this repository, you can get inspired by the readme file of other repositories or cheatsheets online about github text editing.
 
 ## **This REPOSITORY is Private** 
