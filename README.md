@@ -122,7 +122,7 @@ If you do not achieve such a result, make sure to go back and double check the c
    - Start small by keeping the number of epochs to 1. 
    - Run the model using the following code: 
 ```
-python main.py --data_path ../dataset/ --output [path_to_output_folder] --epoch 1 
+python main.py --dataset_file face --data_path ../dataset/ --output [path_to_output_folder] --epoch 1 
 ```
 5. After you have completed training your model, you can find the output files under the ‘output’ folder. 
    - The file names ‘checkpoint.pth’ will store your model 
