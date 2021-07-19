@@ -1,27 +1,27 @@
 # Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved
 """
-Smoke dataset which returns image_id for evaluation.
+Smoke dataset which returns image_id for evaluation. #**replaced Coco with Smoke
 
-Mostly copy-paste from https://github.com/pytorch/vision/blob/13b35ff/references/detection/Smoke_utils.py
+Mostly copy-paste from https://github.com/pytorch/vision/blob/13b35ff/references/detection/Smoke_utils.py #**replaced Coco with Smoke
 """
 from pathlib import Path
 
 import torch
 import torch.utils.data
 import torchvision
-from pycocotools import mask as Smoke_mask
+from pycocotools import mask as Smoke_mask #**replaced Coco with Smoke
 
 import datasets.transforms as T
 
 
-class SmokeDetection(torchvision.datasets.CocoDetection):
+class SmokeDetection(torchvision.datasets.CocoDetection): #**replaced Coco with Smoke
     def __init__(self, img_folder, ann_file, transforms, return_masks):
-        super(SmokeDetection, self).__init__(img_folder, ann_file)
+        super(SmokeDetection, self).__init__(img_folder, ann_file) #**replaced Coco with Smoke
         self._transforms = transforms
-        self.prepare = ConvertSmokePolysToMask(return_masks)
+        self.prepare = ConvertSmokePolysToMask(return_masks) #**replaced Coco with Smoke
 
     def __getitem__(self, idx):
-        img, target = super(SmokeDetection, self).__getitem__(idx)
+        img, target = super(SmokeDetection, self).__getitem__(idx) #**replaced Coco with Smoke
         image_id = self.ids[idx]
         target = {'image_id': image_id, 'annotations': target}
         img, target = self.prepare(img, target)
@@ -30,11 +30,11 @@ class SmokeDetection(torchvision.datasets.CocoDetection):
         return img, target
 
 
-def convert_Smoke_poly_to_mask(segmentations, height, width):
+def convert_Smoke_poly_to_mask(segmentations, height, width): #**replaced Coco with Smoke
     masks = []
     for polygons in segmentations:
-        rles = Smoke_mask.frPyObjects(polygons, height, width)
-        mask = Smoke_mask.decode(rles)
+        rles = Smoke_mask.frPyObjects(polygons, height, width) #**replaced Coco with Smoke
+        mask = Smoke_mask.decode(rles)#**replaced Coco with Smoke
         if len(mask.shape) < 3:
             mask = mask[..., None]
         mask = torch.as_tensor(mask, dtype=torch.uint8)
@@ -47,7 +47,7 @@ def convert_Smoke_poly_to_mask(segmentations, height, width):
     return masks
 
 
-class ConvertSmokePolysToMask(object):
+class ConvertSmokePolysToMask(object): #**replaced Coco with Smoke
     def __init__(self, return_masks=False):
         self.return_masks = return_masks
 
@@ -73,7 +73,7 @@ class ConvertSmokePolysToMask(object):
 
         if self.return_masks:
             segmentations = [obj["segmentation"] for obj in anno]
-            masks = convert_Smoke_poly_to_mask(segmentations, h, w)
+            masks = convert_Smoke_poly_to_mask(segmentations, h, w) #**replaced Coco with Smoke
 
         keypoints = None
         if anno and "keypoints" in anno[0]:
@@ -112,7 +112,7 @@ class ConvertSmokePolysToMask(object):
         return image, target
 
 
-def make_Smoke_transforms(image_set):
+def make_Smoke_transforms(image_set): #**replaced Coco with Smoke
 
     normalize = T.Compose([
         T.ToTensor(),
@@ -146,13 +146,14 @@ def make_Smoke_transforms(image_set):
 
 def build(image_set, args):
     root = Path(args.data_path)
-    assert root.exists(), f'provided Smoke path {root} does not exist'
+    assert root.exists(), f'provided Smoke path {root} does not exist' #**replaced Coco with Smoke
     mode = 'instances'
-    PATHS = {
-        "train": (root / "WIDER_train2/images", root / f'detr_train.json'),
-        "val": (root / "WIDER_train2/images", root / f'detr_val.json'),
+    PATHS = {                   
+        "train": (root / "WIDER_train2/images", root / f'detr_train.json'),         #changed path to just include root for training images and json file for bounding boxes for training
+        "val": (root / "WIDER_train2/images", root / f'detr_val.json'),             #changed path to just include root for validation images and json file for bounding boxes for validation
     }
 
     img_folder, ann_file = PATHS[image_set]
-    dataset = SmokeDetection(img_folder, ann_file, transforms=make_Smoke_transforms(image_set), return_masks=args.masks)
+    dataset = SmokeDetection(img_folder, ann_file, transforms=make_Smoke_transforms(image_set), return_masks=args.masks) #**replaced Coco with Smoke
     return dataset
+
