@@ -49,13 +49,13 @@ In this read.me file, you can find the instructions for the following tasks:
 In order to start reproducing our work, you need to install the following libraries: 
 
 Conda Installs:
-'''
+```
 
-conda install pytorch torchvision **Different depending on your computer**
+conda install pytorch torchvision   **Different depending on your computer**
 **pytorch and torchvision must be compatible with each other, if you cannot get them to be compatible in your current environment, create a new one.**
 pip install pycocotools
 
-'''
+```
 
 ## Data preparation:
 
