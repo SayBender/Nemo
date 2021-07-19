@@ -87,13 +87,13 @@ If you do not achieve such a result, make sure to go back and double check the c
 2. Make sure your dataset is in COCO JSON format. In order to do this, you can check out the data preparation section above. 
 3. Next, check out the following files as you will need to make edits: smoke.py, detr.py, __init__.py, and main.py 
 - All the necessary changes are already commented in the files themselves if you are training for smoke with 4 different classes of smoke.
-  If you want to change the number of classes, go to detr.py in the models folder, then scroll down to class build(args). Change num_classes for the dataset you want to change.
-  Our 4 different classes are smoke, fire, flame, and NightSmoke. If you want to change the labels go to test.py and change them in CLASSES.
+ - If you want to change the number of classes, go to detr.py in the models folder, then scroll down to class build(args). Change num_classes for the dataset you want to change.
+ -Our 4 different classes are smoke, fire, flame, and NightSmoke. If you want to change the labels go to test.py and change them in CLASSES.
 - Look for comments as we have already added all instructions on making the changes
 - To fine tune our model or to train a new smoke model, all you have to do is change the names of the JSON files and image folders for training and validation to access your files in the smoke.py file 
-  If you are satisfied with the default layers and number of queries then you can start training your model now and skip to 4.
+ -If you are satisfied with the default layers and number of queries then you can start training your model now and skip to 4.
 - If you wish to change the number of layers or number of queries go to main.py and scroll to # * Transformer in def get_args_parser(). There you will find and can change the number of queries and encoding and decoding layers.
-  Reflect those changes in test.py if you plan on testing your model.
+ -Reflect those changes in test.py if you plan on testing your model.
 4. After you are done making changes and your dataset is ready, you are ready to start training the model 
 - Start small by keeping the number of epochs to 1. 
 - Run the model using the following code: $ python main.py --data_path ../dataset/ --output [path_to_output_folder] --epoch 1 
