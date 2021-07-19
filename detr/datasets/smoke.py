@@ -145,7 +145,7 @@ def make_Smoke_transforms(image_set): #**replaced Coco with Smoke
 
 
 def build(image_set, args):
-    root = Path(args.data_path)
+    root = Path(args.data_path)  #changed the root to data_path 
     assert root.exists(), f'provided Smoke path {root} does not exist' #**replaced Coco with Smoke
     mode = 'instances'
     PATHS = {                   
