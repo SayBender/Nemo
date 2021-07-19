@@ -41,6 +41,55 @@ The Nemo model ran with 5 queries, 6 layers, and 30 epochs. The results are as f
 
 (put in a table)
 
+<table>
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>IoU</th>
+      <th>Area</th>
+      <th>AP</th>
+    </tr>
+   </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.50</td>
+      <td>all</td>
+     <td>0.031</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.50</td>
+      <td>all</td>
+      <td>0.074</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.75</td>
+      <td>all</td>
+      <td>0.020</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.50</td>
+      <td>small</td>
+      <td>0.059</td>
+    </tr>
+   <tr>
+      <th>4</th>
+      <td>0.50</td>
+      <td>medium</td>
+      <td>0.027</td>
+    </tr>
+   <tr>
+      <th>5</th>
+      <td>0.50</td>
+      <td>large</td>
+      <td>0.043</td>
+    </tr>
+  </tbody>
+</table>
+
 In this read.me file, you can find the instructions for the following tasks:
 - Data Preparation 
 - Testing our model 
@@ -76,6 +125,8 @@ python test.py --data_path [path_to_dataset] --resume [path_to_checkpoint.pth]
 ```
 
 Here is a sample of the output: 
+
+![Sample test result](sample_test_result.png)
 
 If you do not achieve such a result, make sure to go back and double check the checklist. 
 
