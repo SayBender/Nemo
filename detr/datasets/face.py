@@ -149,8 +149,8 @@ def build(image_set, args):
     assert root.exists(), f'provided Face path {root} does not exist'
     mode = 'instances'
     PATHS = {
-        "train": (root / "WIDER_train2/images", root / f'detr_train.json'),
-        "val": (root / "WIDER_train2/images", root / f'detr_val.json'),
+        "train": (root / "sample_train_frames", root / f'sample_train.json'),
+        "val": (root / "sample_val_frames", root / f'sample_val.json'),
     }
 
     img_folder, ann_file = PATHS[image_set]
