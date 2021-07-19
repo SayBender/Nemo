@@ -317,7 +317,7 @@ def build(args):
         #num_classes = 250
     if args.dataset_file == "face":
         num_classes = 4
-    if args.dataset_file == "smoke":
+    if args.dataset_file == "smoke": #** added argument for when the dataset file is called smoke, sets the num_classes to 4; including no object class.
         num_classes = 4
         
     device = torch.device(args.device)
