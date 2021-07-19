@@ -176,9 +176,9 @@ def main(args):
         else:
             checkpoint = torch.load(args.resume, map_location='cpu')
 
-        del checkpoint["model"]["class_embed.weight"]
-        del checkpoint["model"]["class_embed.bias"]
-        del checkpoint["model"]["query_embed.weight"]
+        del checkpoint["model"]["class_embed.weight"] #** deletes model weights to use a pretrained model weights
+        del checkpoint["model"]["class_embed.bias"] #** deletes model weights to use a pretrained model weights
+        del checkpoint["model"]["query_embed.weight"]   #** deletes model weights to use a pretrained model weights
 
 
 
