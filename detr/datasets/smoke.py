@@ -150,7 +150,7 @@ def build(image_set, args):
     mode = 'instances'
     PATHS = {                   
         "train": (root / "sample_train_frames", root / f'nemo_sample_train.json'),         #changed path to just include root for training images and json file for bounding boxes for training
-        "val": (root / "sample_val_frames", root / f'nemo_val_train.json'),             #changed path to just include root for validation images and json file for bounding boxes for validation
+        "val": (root / "sample_val_frames", root / f'nemo_sample_val.json'),             #changed path to just include root for validation images and json file for bounding boxes for validation
     }
 
     img_folder, ann_file = PATHS[image_set]
