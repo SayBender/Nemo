@@ -2,7 +2,7 @@
   "annotations" : [
     {
       "area" : 5180,
-      "category_id" : 1626288857,
+      "category_id" : 1,
       "segmentation" : [
 
       ],
@@ -30,7 +30,7 @@
         139
       ],
       "iscrowd" : 0,
-      "category_id" : 1626288857
+      "category_id" : 1
     },
     {
       "iscrowd" : 0,
@@ -40,7 +40,7 @@
 
       ],
       "area" : 15488,
-      "category_id" : 1626288857,
+      "category_id" : 1,
       "bbox" : [
         126,
         66,
@@ -61,12 +61,12 @@
         244,
         141
       ],
-      "category_id" : 1626288857,
+      "category_id" : 1,
       "area" : 15317
     },
     {
       "iscrowd" : 0,
-      "category_id" : 1626288857,
+      "category_id" : 1,
       "segmentation" : [
 
       ],
@@ -94,7 +94,7 @@
 
       ],
       "image_id" : 5,
-      "category_id" : 1626288857
+      "category_id" : 1
     }
   ],
   "images" : [
@@ -137,7 +137,7 @@
   ],
   "categories" : [
     {
-      "id" : 1626288857,
+      "id" : 1,
       "name" : "smoke"
     }
   ]
