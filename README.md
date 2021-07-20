@@ -25,25 +25,25 @@ The Nemo model ran with 5 queries, 6 layers, and 30 epochs. The results are as f
       <th>0</th>
       <td>0.50</td>
       <td>all</td>
-     <td>0.031</td>
+     <td>0.056</td>
     </tr>
     <tr>
       <th>1</th>
       <td>0.50</td>
       <td>all</td>
-      <td>0.074</td>
+      <td>0.175</td>
     </tr>
     <tr>
       <th>2</th>
       <td>0.75</td>
       <td>all</td>
-      <td>0.020</td>
+      <td>0.034</td>
     </tr>
     <tr>
       <th>3</th>
       <td>0.50</td>
       <td>small</td>
-      <td>0.059</td>
+      <td>0.008</td>
     </tr>
    <tr>
       <th>4</th>
@@ -55,7 +55,7 @@ The Nemo model ran with 5 queries, 6 layers, and 30 epochs. The results are as f
       <th>5</th>
       <td>0.50</td>
       <td>large</td>
-      <td>0.043</td>
+      <td>0.107</td>
     </tr>
   </tbody>
 </table>
@@ -95,8 +95,14 @@ pip install opencv-python
 
 After you have all the necessary files listed above, you are ready to test the model using a custom dataset. In order to test the model, you can simply run the following script: 
 
+If you have GPU:
 ```
 python test.py --data_path [path_to_dataset] --resume [path_to_checkpoint.pth]
+```
+
+If you have CPU:
+```
+python test.py --data_path [path_to_dataset] --resume [path_to_checkpoint.pth] --device cpu
 ```
 
 Here is a sample of the output: 
@@ -124,11 +130,29 @@ If you do not achieve such a result, make sure to go back and double check the c
    - If you wish to change the number of layers or number of queries go to main.py and scroll to # * Transformer in def get_args_parser(). There you will find and can change the number of queries and encoding and decoding layers.
      - Reflect those changes in test.py if you plan on testing your model.
 4. After you are done making changes and your dataset is ready, you are ready to start training the model 
-   - Start small by keeping the number of epochs to 1. 
+   - Start small by keeping the number of epochs to 1.
+     - The epochs can be whatever you computer can handle, the default is 300 if you do not specify.
    - Run the model using the following code: 
 ```
-python main.py --dataset_file face --data_path ../dataset/ --output [path_to_output_folder] --epoch 1 
+GPU:
+python main.py --dataset_file smoke --data_path ../dataset/ --output_dir output --epoch 1 
+or
+python main.py --dataset_file smoke --data_path ../dataset/[your_dataset]/ --output_dir [output_file] --epoch [number]
+
+CPU:
+python main.py --dataset_file smoke --data_path ../dataset/ --output_dir output --epoch 1 --device cpu
+or
+python main.py --dataset_file smoke --data_path ../dataset/[your_dataset]/ --output_dir [output_file] --epoch [number] --device cpu
 ```
+
+   - To fine tune a pretrained model, include the below onto the above code: 
+   ```
+   --resume [path_to_model/model]
+   Example: 
+   python main.py --dataset_file smoke --data_path ../dataset/ --output_dir output --epoch 1 --device cpu --resume ../output/checkpoint.pth
+   ```
+   - You can change the number of layers and queries using --enc_layers [ENC_LAYERS] --dec_layers [DEC_LAYERS] --num_queries [NUM_QUERIES] for that run only.
+     - Include these arguments when running test.py if you trained your model using them.
 5. After you have completed training your model, you can find the output files under the ‘output’ folder. 
    - The file names ‘checkpoint.pth’ will store your model 
 6. To test your model, you can following the directions under ‘Testing your model’
