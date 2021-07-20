@@ -2,7 +2,7 @@
   "annotations" : [
     {
       "id" : 0,
-      "category_id" : 1626289044,
+      "category_id" : 1,
       "segmentation" : [
 
       ],
@@ -29,12 +29,12 @@
       ],
       "image_id" : 1,
       "iscrowd" : 0,
-      "category_id" : 1626289044,
+      "category_id" : 1,
       "id" : 1
     },
     {
       "area" : 14452,
-      "category_id" : 1626289044,
+      "category_id" : 1,
       "image_id" : 2,
       "iscrowd" : 0,
       "bbox" : [
@@ -72,7 +72,7 @@
   "categories" : [
     {
       "name" : "smoke",
-      "id" : 1626289044
+      "id" : 1
     }
   ]
 }
