@@ -149,8 +149,8 @@ def build(image_set, args):
     assert root.exists(), f'provided Smoke path {root} does not exist' #**replaced Coco with Smoke
     mode = 'instances'
     PATHS = {                   
-        "train": (root / "WIDER_train2/images", root / f'detr_train.json'),         #changed path to just include root for training images and json file for bounding boxes for training
-        "val": (root / "WIDER_train2/images", root / f'detr_val.json'),             #changed path to just include root for validation images and json file for bounding boxes for validation
+        "train": (root / "sample_train_frames", root / f'nemo_sample_train.json'),         #changed path to just include root for training images and json file for bounding boxes for training
+        "val": (root / "sample_val_frames", root / f'nemo_val_train.json'),             #changed path to just include root for validation images and json file for bounding boxes for validation
     }
 
     img_folder, ann_file = PATHS[image_set]
