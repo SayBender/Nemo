@@ -2,7 +2,7 @@
 ========
 PyTorch training code and pretrained models for **NEmo** (**NE**vada s**mo**ke detection benchmark).
 
-The Nemo DETR model is a pretrained model that aims to detect wildfire in the early stages; incipient and growth stage. This model is created for object detection. It has a CNN backbone along with encoder-decoder transformers. It also uses a loss function for bipartite matching. Because of its architecture, it is a much simpler approach. It is trained using 2848 unique smoke images. The validation dataset included 174 smoke images as well. 
+The Nemo wildfire smoke detection benchmark is a pretrained model based on Facebook AI's DETR that aims to detect wildfire in the early stages; incipient and growth stage. This model is created for object detection. It has a CNN backbone along with encoder-decoder transformers. It also uses a loss function for bipartite matching. Because of its architecture, it is a much simpler approach. It is trained using 2848 unique smoke images. The validation dataset included 174 smoke images as well. 
 
 The Nemo model ran with 5 queries, 6 layers, and 30 epochs. The results are as follows:
 
