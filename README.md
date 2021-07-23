@@ -135,7 +135,8 @@ GPU:
 python main.py --dataset_file smoke --data_path ../dataset/ --output_dir output --epoch 1 
 or
 python main.py --dataset_file smoke --data_path ../dataset/[your_dataset]/ --output_dir [output_file] --epoch [number]
-
+```
+```
 CPU:
 python main.py --dataset_file smoke --data_path ../dataset/ --output_dir output --epoch 1 --device cpu
 or
@@ -145,7 +146,9 @@ python main.py --dataset_file smoke --data_path ../dataset/[your_dataset]/ --out
    - To fine tune a pretrained model, include the below onto the above code: 
    ```
    --resume [path_to_model/model]
+   ```
    Example: 
+   ```
    python main.py --dataset_file smoke --data_path ../dataset/ --output_dir output --epoch 1 --device cpu --resume ../output/checkpoint.pth
    ```
    - You can change the number of layers and queries using --enc_layers [ENC_LAYERS] --dec_layers [DEC_LAYERS] --num_queries [NUM_QUERIES] for that run only.
