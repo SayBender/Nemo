@@ -14,7 +14,9 @@ The Nemo model ran with 5 queries, 6 layers, and 30 epochs. The results are as f
       <th></th>
       <th>IoU</th>
       <th>Area</th>
-      <th>AP</th>
+      <th>AP</th>Solarized dark             |  Solarized Ocean
+:-------------------------:|:-------------------------:
+![](https://...Dark.png)  |  ![](https://...Ocean.png)
     </tr>
    </thead>
   <tbody>
@@ -131,6 +133,9 @@ IoU metric: bbox
  ```
  Example inferences:
  
+ 1            |  2
+:-------------------------:|:-------------------------:
+![Caughlin Ranch Pinehaven Fire (Nov 2020)](CaughlinRanch_PineHaven_fire_Nov2020.png)  |  ![Caughlin Ranch Pinehaven Fire (Nov 2020)](CaughlinRanch_PineHaven_fire_Nov2020.png) 
  ![Caughlin Ranch Pinehaven Fire (Nov 2020)](CaughlinRanch_PineHaven_fire_Nov2020.png) 
  
  ## How to finetune our model:
