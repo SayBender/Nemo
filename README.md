@@ -115,7 +115,7 @@ In order to evaluate the model, simply run:
 ```
 python main.py  --dataset_file smoke --data_path [path/to/dataset] --output_dir [path/to/output] --eval --resume [path/to/checkpoint.pth] --device [device] 
 ```
-Example output: this is an example evaluation output on 20 images containing only fire and flame:
+Example evaluation output on 20 images containing only fire and flame:
 ```
 IoU metric: bbox
  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.117
