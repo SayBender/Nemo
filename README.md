@@ -6,8 +6,7 @@ The Nemo wildfire smoke detection benchmark is a pretrained model based on Faceb
 
 The Nemo model ran with 5 queries, 6 layers, and 30 epochs. The results are as follows:
 
-(put in a table)
-
+(initial results based on 30 epochs - to be updated)
 <table>
   <thead>
     <tr style="text-align: right;">
