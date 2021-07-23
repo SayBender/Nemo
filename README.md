@@ -14,9 +14,7 @@ The Nemo model ran with 5 queries, 6 layers, and 30 epochs. The results are as f
       <th></th>
       <th>IoU</th>
       <th>Area</th>
-      <th>AP</th>Solarized dark             |  Solarized Ocean
-:-------------------------:|:-------------------------:
-![](https://...Dark.png)  |  ![](https://...Ocean.png)
+      <th>AP</th>
     </tr>
    </thead>
   <tbody>
