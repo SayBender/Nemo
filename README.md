@@ -129,6 +129,11 @@ IoU metric: bbox
  Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.179
  Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.262
  ```
+ Example inferences:
+ 
+ Caughlin Ranch Pinehaven Fire (Nov 2020)            |  Tumbleweed fire CA (July 2021)
+:-------------------------:|:-------------------------:
+![](Screenshot from 2021-07-23 09-17-49.png)  |  ![](Screenshot from 2021-07-23 09-18-08.png)
  
  ## How to finetune our model:
  
