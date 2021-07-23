@@ -88,7 +88,7 @@ pip install opencv-python
 You might also need to install ``pycocotools`` and ``scipy`` in your environment.
 
  1. Test.py script: This script takes a directory of images to be inferred against a model and displays image for each bounding box. To move between images with labelled bounding boxes, you can close the image. Once you see an image with green bounding boxes, press space to infer the next image. If an image in your dataset does not show, it means the model did not infer any bounding boxes for that image. To evaluate the performance of the model refer to Evaluating the model. It is important to note that all the changeable parameters such as number of layers and queries must match that of the model. If you plan on testing our model, you don't have to change anything, however, if you are testing using a model you designed with different parameters, you will need to pass those parameters accordingly. For example, if you trained the model with 5 queries, you need to pass ``--num-queries 5`` as an optional argument when executing ``test.py``. 
- 2. Model: You need a pretrained model for inference. The model can be found in [Add a URL later]. The model is stored under the file ‘checkpoint.pth’. 
+ 2. Model: You need a pretrained model for inference. Our pre-trained models can be found in [Add a URL later]. The model is stored under the file ‘checkpoint.pth’. 
  3. Custom dataset: In order to test the model, you will need to have a dataset consisting of images with both smoke and non-smoke data. If you don’t have a dataset of your own, we have also provided the link to Govil et al.’s fuego dataset. (https://drive.google.com/file/d/1x4bzhH-ZgEUUvh45EStFNrTT_wLSPC35/view)
 
 After you have all the necessary files listed above, you are ready to test the model using a custom dataset. In order to test the model, you can simply run the following script: 
@@ -109,6 +109,12 @@ Here is a sample of the output:
 
 If you do not achieve such a result, make sure to go back and double check the checklist. 
 
+## Evaluating the model:
+
+In order to evaluate the model, simply run:
+```
+python main.py  --dataset_file smoke --data_path [path/to/dataset] --output_dir [path/to/output] --eval --resume [path/to/checkpoint.pth] --device [device] 
+```
 
  ## How to finetune our model:
  
