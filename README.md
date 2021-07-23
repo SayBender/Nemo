@@ -131,8 +131,7 @@ IoU metric: bbox
  ```
  Example inferences:
  
- ![Caughlin Ranch Pinehaven Fire (Nov 2020)](Screenshot from 2021-07-23 09-17-49.png)
- ![Tumbleweed fire CA (July 2021)](Screenshot from 2021-07-23 09-18-08.png)
+ ![Caughlin Ranch Pinehaven Fire (Nov 2020)](CaughlinRanch_PineHaven_fire_Nov2020.png) 
  
  ## How to finetune our model:
  
