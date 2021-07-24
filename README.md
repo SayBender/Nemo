@@ -1,7 +1,7 @@
 **NEmo: A wildfire smoke detection benchmark**
 ========
 PyTorch training code and pretrained models for **NEmo** (**NE**vada s**mo**ke detection benchmark).
-![Sample test result](nemo.png)
+![NEMO](.github/nemo.png)
 The Nemo wildfire smoke detection benchmark is a pretrained model based on Facebook AI's DETR that aims to detect wildfire in the early stages; incipient and growth stage. This model is created for object detection. It has a CNN backbone along with encoder-decoder transformers. It also uses a loss function for bipartite matching. Because of its architecture, it is a much simpler approach. It is trained using 2848 unique smoke images. The validation dataset included 174 smoke images as well. 
 
 The Nemo model ran with 5 queries, 6 layers, and 30 epochs. The results are as follows:
@@ -104,7 +104,7 @@ python test.py --data_path [path_to_dataset] --resume [path_to_checkpoint.pth] -
 
 Here is a sample of the output: 
 
-![Sample test result](sample_test_result.png)
+![Sample test result](.github/sample_test_result.png)
 
 If you do not achieve such a result, make sure to go back and double check the checklist. 
 
@@ -132,7 +132,7 @@ IoU metric: bbox
  
  Caughlin Ranch, Pinehaven Fire Nov 2020            |  Tumbleweed fire CA July 2021
 :-------------------------:|:-------------------------:
-![Caughlin Ranch Pinehaven Fire (Nov 2020)](CaughlinRanch_PineHaven_fire_Nov2020.png)  | ![Caughlin Ranch Pinehaven Fire (Nov 2020)](TumbleWeed_fire_CA_2021Jul.png)
+![Caughlin Ranch Pinehaven Fire (Nov 2020)](./github/CaughlinRanch_PineHaven_fire_Nov2020.png)  | ![TumbleWeed Fire Cal](.github/TumbleWeed_fire_CA_2021Jul.png)
  
  ## How to finetune our model:
  
