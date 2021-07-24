@@ -4,9 +4,9 @@ PyTorch training code and pretrained models for **NEmo** (**NE**vada s**mo**ke d
 ![NEMO](.github/nemo.png)
 The Nemo wildfire smoke detection benchmark is a pretrained model based on Facebook AI's DETR that aims to detect wildfire in the early stages; incipient and growth stage. This model is created for object detection. It has a CNN backbone along with encoder-decoder transformers. It also uses a loss function for bipartite matching. Because of its architecture, it is a much simpler approach. It is trained using 2848 unique smoke images. The validation dataset included 174 smoke images as well. 
 
-The Nemo model ran with 5 queries, 6 layers, and 30 epochs. The results are as follows:
+The Nemo model ran with 5 queries, 6 layers, and 200 epochs. The results are as follows:
 
-(initial results based on 30 epochs - to be updated)
+Preliminary results evaluated on 75 images containing fire at incipient stage (first 15 minutes- this is a very challenging test set)
 <table>
   <thead>
     <tr style="text-align: right;">
@@ -19,39 +19,39 @@ The Nemo model ran with 5 queries, 6 layers, and 30 epochs. The results are as f
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.50</td>
+      <td>0.50:0.95</td>
       <td>all</td>
-     <td>0.056</td>
+     <td>0.096</td>
     </tr>
     <tr>
       <th>1</th>
       <td>0.50</td>
       <td>all</td>
-      <td>0.175</td>
+      <td>0.298</td>
     </tr>
     <tr>
       <th>2</th>
       <td>0.75</td>
       <td>all</td>
-      <td>0.034</td>
+      <td>0.038</td>
     </tr>
     <tr>
       <th>3</th>
       <td>0.50</td>
       <td>small</td>
-      <td>0.008</td>
+      <td>-1.00</td>
     </tr>
    <tr>
       <th>4</th>
       <td>0.50</td>
       <td>medium</td>
-      <td>0.027</td>
+      <td>0.047</td>
     </tr>
    <tr>
       <th>5</th>
       <td>0.50</td>
       <td>large</td>
-      <td>0.107</td>
+      <td>0.149</td>
     </tr>
   </tbody>
 </table>
