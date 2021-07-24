@@ -132,7 +132,7 @@ IoU metric: bbox
  
  Caughlin Ranch, Pinehaven Fire Nov 2020            |  Tumbleweed fire CA July 2021
 :-------------------------:|:-------------------------:
-![Caughlin Ranch Pinehaven Fire (Nov 2020)](./github/CaughlinRanch_PineHaven_fire_Nov2020.png)  | ![TumbleWeed Fire Cal](.github/TumbleWeed_fire_CA_2021Jul.png)
+![Caughlin Ranch Pinehaven Fire (Nov 2020)](.github/CaughlinRanch_PineHaven_fire_Nov2020.png)  | ![TumbleWeed Fire Cal](.github/TumbleWeed_fire_CA_2021Jul.png)
  
  ## How to finetune our model:
  
