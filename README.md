@@ -74,6 +74,15 @@ pip install pycocotools
 
 ## Data preparation:
 
+Download and extract NEMO 2020 train and val images with annotations from [ADD A URL ONCE DATASET IS PUBLIC]. We expect the directory structure to be the following: 
+```
+path/to/nemo/
+  nemo_sample_train.json  # train annotation json file
+  nemo_sample_val.json    # val annotation json file
+  sample_train_frames/    # train images
+  sample_val_frames/      # val images
+```
+
 The DETR model only accepts files in COCO JSON format. In order to create a dataset, annotate your images using any tool that specializes in object labelling, or that creates bounding boxes, that will export your annotations into JSON files. If you wish to use tools that don't export directly into COCO JSON format, you can convert your YOLO or CSV files into JSON files. It is easier to combine annotations and datasets using a non-JSON format if you are working with multiple people on one training dataset. We converted our YOLO annotations into JSON files using https://github.com/Taeyoung96/Yolo-to-COCO-format-converter. If you follow the linked Github or export your annotations as a JSON file, your dataset will be ready to train the model.
 
 ## Testing the model:
