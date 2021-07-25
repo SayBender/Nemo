@@ -82,6 +82,7 @@ path/to/nemo/
   sample_train_frames/    # train images
   sample_val_frames/      # val images
 ```
+**NOTE**: Path to dataset (``--data-path``) refers to the above directory. And while train frames and annotations are not needed for testing and evaluation, placeholder directory and file with the same names are required (They can contain nothing, if all you want to do is to evaluate a set of validation images against a pre-trained model or simply do inference on a group of images based on a pretrained model).
 
 The DETR model only accepts files in COCO JSON format. In order to create a dataset, annotate your images using any tool that specializes in object labelling, or that creates bounding boxes, that will export your annotations into JSON files. If you wish to use tools that don't export directly into COCO JSON format, you can convert your YOLO or CSV files into JSON files. It is easier to combine annotations and datasets using a non-JSON format if you are working with multiple people on one training dataset. We converted our YOLO annotations into JSON files using https://github.com/Taeyoung96/Yolo-to-COCO-format-converter. If you follow the linked Github or export your annotations as a JSON file, your dataset will be ready to train the model.
 
