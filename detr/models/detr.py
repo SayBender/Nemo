@@ -318,7 +318,7 @@ def build(args):
     if args.dataset_file == "face":
         num_classes = 4
     if args.dataset_file == "smoke": #** added argument for when the dataset file is called smoke, sets the num_classes to 4; including no object class.
-        num_classes = 4
+        num_classes = 5 # Amirhesam: This value was "4" but it should be 4 + 1 (counting the no-object class) 
         
     device = torch.device(args.device)
 
