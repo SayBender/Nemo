@@ -1,4 +1,5 @@
-**NEmo: A wildfire smoke detection benchmark**
+**Nemo: An Open-Sourced Transformer-supercharged Benchmark
+for Fine-grained Wildfire Smoke Detection**
 ========
 PyTorch training code and pretrained models for **NEmo** (**NE**vada s**mo**ke detection benchmark).
 ![NEMO](.github/nemo.png)
