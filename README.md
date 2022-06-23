@@ -70,6 +70,8 @@ Here is a sample of the output:
 
 If you do not achieve such a result, make sure to go back and double check the checklist. 
 
+**NOTE**: Many of the examples below are based on our first trained model, not the ones reported in paper.
+
 ## Evaluating the model:
 
 In order to evaluate the model, simply run:
