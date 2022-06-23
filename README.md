@@ -6,55 +6,7 @@ PyTorch training code, select datasets and pretrained models for **Nemo** (**Ne*
 The Nemo wildfire smoke detection benchmark is a set of evolving preprocessed datasets in standard COCO format and pretrained wildfire smoke detectors based on Facebook AI's DETR that aims to detect wildfire in incipient stage (especially the first few minutes from start of wildfire). This model is created for object detection. It has a CNN backbone along with encoder-decoder transformers. It also uses bipartite matching loss function.
 
 
-Preliminary results evaluated on 75 images containing fire at incipient stage (first 15 minutes- this is a very challenging test set)
-<table>
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>IoU</th>
-      <th>Area</th>
-      <th>AP</th>
-    </tr>
-   </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>0.50:0.95</td>
-      <td>all</td>
-     <td>0.096</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>0.50</td>
-      <td>all</td>
-      <td>0.298</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>0.75</td>
-      <td>all</td>
-      <td>0.038</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>0.50</td>
-      <td>small</td>
-      <td>-1.00</td>
-    </tr>
-   <tr>
-      <th>4</th>
-      <td>0.50</td>
-      <td>medium</td>
-      <td>0.047</td>
-    </tr>
-   <tr>
-      <th>5</th>
-      <td>0.50</td>
-      <td>large</td>
-      <td>0.149</td>
-    </tr>
-  </tbody>
-</table>
+
 
 In this read.me file, you can find the instructions for the following tasks:
 - Data Preparation 
@@ -82,7 +34,7 @@ path/to/nemo/
   sample_train_frames/    # train images
   sample_val_frames/      # val images
 ```
-**NOTE**: While train frames and annotations are not needed for testing and evaluation, placeholder directory and file with the same names are required (They can contain nothing, if all you want to do is to evaluate a set of validation images against a pre-trained model or simply do inference on a group of images based on a pretrained model).
+**NOTE**: While train frames and annotations are not needed for evaluation, placeholder directory and file with the same names are required (They can contain nothing, if all you want to do is to evaluate a set of validation images against a pre-trained model ).
 
 The DETR model only accepts files in COCO JSON format. In order to create a dataset, annotate your images using any tool that specializes in object labelling, or that creates bounding boxes, that will export your annotations into JSON files. If you wish to use tools that don't export directly into COCO JSON format, you can convert your YOLO or CSV files into JSON files. It is easier to combine annotations and datasets using a non-JSON format if you are working with multiple people on one training dataset. You can convert CSV annotations to COCO JSON format using the instructions and code found in [this tutorial](https://medium.com/analytics-vidhya/how-to-convert-tensorflow-object-detection-csv-data-to-coco-json-format-d0693d5b2f75).  We converted our YOLO annotations into JSON files using [this link](https://github.com/Taeyoung96/Yolo-to-COCO-format-converter). If you follow the [linked Github](https://github.com/Taeyoung96/Yolo-to-COCO-format-converter) or export your annotations as a JSON file, your dataset will be ready to train the model.
 
