@@ -1,4 +1,4 @@
-**Nemo: An Open-Sourced Transformer-supercharged Benchmark
+**[In-Review] Nemo: An Open-Sourced Transformer-supercharged Benchmark
 for Fine-grained Wildfire Smoke Detection**
 ========
 PyTorch training code, select datasets and pretrained models for **Nemo** (**Ne**vada s**mo**ke detection benchmark).
