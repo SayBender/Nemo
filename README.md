@@ -2,7 +2,7 @@
 for Fine-grained Wildfire Smoke Detection**
 ========
 
-**NOTE**: The repository is in review mode. The paper associated with this project is being submitted to a journal. Upon acceptance, more data and models will be added.
+**NOTE**: The repository is in review mode. The paper associated with this project is being submitted to a journal. More data and models will be added soon.
 
 PyTorch training code, select datasets and pretrained models for **Nemo** (**Ne**vada s**mo**ke detection benchmark).
 ![NEMO](.github/Nemo_overview_v2.png)
