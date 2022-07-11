@@ -1,6 +1,9 @@
-**Nemo: An Open-Sourced Transformer-supercharged Benchmark
+**[In-Review] Nemo: An Open-Sourced Transformer-supercharged Benchmark
 for Fine-grained Wildfire Smoke Detection**
 ========
+
+**NOTE**: The repository is in review mode. The paper associated with this project is being submitted to a journal. More result snapshots (quantitative and qualitative), data and wildfire smoke detection models will be added soon. Upon publication, a means to cite the article assoicated with the benchmark will also be provided. We appreciate to cite the paper if you found the data or pre-trained models useful.
+
 PyTorch training code, select datasets and pretrained models for **Nemo** (**Ne**vada s**mo**ke detection benchmark).
 ![NEMO](.github/Nemo_overview_v2.png)
 The Nemo wildfire smoke detection benchmark is a set of evolving preprocessed datasets in standard COCO format and pretrained wildfire smoke detectors based on Facebook AI's DETR that aims to detect wildfire in incipient stage (especially the first few minutes from start of wildfire). This model is created for object detection. It has a CNN backbone along with encoder-decoder transformers. It also uses bipartite matching loss function.
