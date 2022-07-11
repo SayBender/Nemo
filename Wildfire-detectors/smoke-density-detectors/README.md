@@ -5,7 +5,8 @@ Based on DETR:
 
 
 Based on Faster RCNN:
-[Nemo-FRCNN-dg]()
+
+Nemo-FRCNN-dg [detector.pth](https://nevada.box.com/s/tckoxw2pjq6brfhnlgsrq22lnarc7qwd) [config.yaml](https://nevada.box.com/s/vynwtiw8sgjkbxn0326m2qz2vy3nre5t)
 
 Based on RetinaNet:
 [Nemo-RNet-dg]()
