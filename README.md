@@ -3,7 +3,9 @@ for Fine-grained Wildfire Smoke Detection**
 ========
 
 This is the PyTorch training code, select datasets and pretrained models for **[Nemo](https://www.mdpi.com/2072-4292/14/16/3979)** (**Ne**vada wildfire s**mo**ke detection benchmark).
+
 ![NEMO](.github/Nemo_overview_v2.png)
+
 The Nemo wildfire smoke detection benchmark is a set of evolving preprocessed datasets in standard COCO format and pretrained wildfire smoke detectors based on Facebook AI's DETR that aims to detect wildfire in incipient stage (especially the first few minutes from start of wildfire). This model is created for object detection. It has a CNN backbone along with encoder-decoder transformers. It also uses bipartite matching loss function.
 
 
